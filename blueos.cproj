@@ -1,0 +1,206 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>6.0</ProjectVersion>
+    <ProjectGuid>c15e1416-829d-41b6-b3a7-fa6118b25d7a</ProjectGuid>
+    <avrdevice>ATmega128</avrdevice>
+    <avrdeviceseries>none</avrdeviceseries>
+    <OutputType>Executable</OutputType>
+    <Language>C</Language>
+    <OutputDirectory>$(MSBuildProjectDirectory)\$(Configuration)</OutputDirectory>
+    <AvrGccProjectExtensions>
+    </AvrGccProjectExtensions>
+    <avrtool>com.atmel.avrdbg.tool.simulator</avrtool>
+    <com_atmel_avrdbg_tool_simulator>
+      <ToolType>com.atmel.avrdbg.tool.simulator</ToolType>
+      <ToolName>AVR Simulator</ToolName>
+      <ToolNumber>
+      </ToolNumber>
+      <KeepTimersRunning>true</KeepTimersRunning>
+      <OverrideVtor>false</OverrideVtor>
+      <OverrideVtorValue>
+      </OverrideVtorValue>
+      <Channel>
+        <host>127.0.0.1</host>
+        <port>61836</port>
+        <ssl>False</ssl>
+      </Channel>
+    </com_atmel_avrdbg_tool_simulator>
+    <avrtoolinterface />
+    <ToolchainName>com.Atmel.AVRGCC8</ToolchainName>
+    <ToolchainFlavour>WinAVR</ToolchainFlavour>
+    <Name>blueos</Name>
+    <AsfVersion>3.5.0</AsfVersion>
+    <KeepTimersRunning>true</KeepTimersRunning>
+    <OverrideVtor>false</OverrideVtor>
+    <OverrideVtorValue />
+    <eraseonlaunchrule>0</eraseonlaunchrule>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'default' ">
+    <OutputPath>bin\default\</OutputPath>
+    <OutputFileName>blueos</OutputFileName>
+    <OutputFileExtension>.elf</OutputFileExtension>
+    <ToolchainSettings>
+      <AvrGcc>
+  <avrgcc.common.outputfiles.hex>True</avrgcc.common.outputfiles.hex>
+  <avrgcc.common.outputfiles.lss>True</avrgcc.common.outputfiles.lss>
+  <avrgcc.common.outputfiles.eep>True</avrgcc.common.outputfiles.eep>
+  <avrgcc.common.outputfiles.srec>True</avrgcc.common.outputfiles.srec>
+  <avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>
+  <avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
+  <avrgcc.compiler.symbols.DefSymbols>
+    <ListValues>
+      <Value>F_CPU=8000000UL</Value>
+    </ListValues>
+  </avrgcc.compiler.symbols.DefSymbols>
+  <avrgcc.compiler.directories.IncludePaths>
+    <ListValues>
+      <Value>..\BlueOS\config</Value>
+      <Value>..\BlueOS\source</Value>
+    </ListValues>
+  </avrgcc.compiler.directories.IncludePaths>
+  <avrgcc.compiler.optimization.level>Optimize for size (-Os)</avrgcc.compiler.optimization.level>
+  <avrgcc.compiler.optimization.PackStructureMembers>True</avrgcc.compiler.optimization.PackStructureMembers>
+  <avrgcc.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcc.compiler.optimization.AllocateBytesNeededForEnum>
+  <avrgcc.compiler.warnings.AllWarnings>True</avrgcc.compiler.warnings.AllWarnings>
+  <avrgcc.compiler.miscellaneous.OtherFlags>-gdwarf-2 </avrgcc.compiler.miscellaneous.OtherFlags>
+  <avrgcc.linker.libraries.Libraries>
+    <ListValues>
+      <Value>m</Value>
+    </ListValues>
+  </avrgcc.linker.libraries.Libraries>
+  <avrgcc.linker.libraries.LibrarySearchPaths>
+    <ListValues>
+      <Value>..\BlueOS\source\</Value>
+    </ListValues>
+  </avrgcc.linker.libraries.LibrarySearchPaths>
+  <avrgcc.assembler.general.AssemblerFlags>-Wall -gdwarf-2        -DF_CPU=32000000UL -Os -funsigned-char -funsigned-bitfields -fpack-struct -fshort-enums</avrgcc.assembler.general.AssemblerFlags>
+  <avrgcc.assembler.general.IncludePaths>
+    <ListValues>
+      <Value>..\BlueOS\config</Value>
+      <Value>..\BlueOS\source</Value>
+    </ListValues>
+  </avrgcc.assembler.general.IncludePaths>
+</AvrGcc>
+    </ToolchainSettings>
+  </PropertyGroup>
+  <Import Project="$(AVRSTUDIO_EXE_PATH)\\Vs\\AvrGCC.targets" />
+  <ItemGroup>
+    <Folder Include="BlueOS" />
+    <Folder Include="BlueOS\config" />
+    <Compile Include="BlueOS\config\blue_hw_atmeg8.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="BlueOS\config\blue_hw_atmeg32.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="BlueOS\config\blue_hw_atmeg128.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="BlueOS\config\blue_hw_atmeg644P.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="BlueOS\config\blue_hw_atxmega128a1.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="BlueOS\config\blue_os_config.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="BlueOS\config\blue_os_hardware.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Folder Include="BlueOS\source" />
+    <Compile Include="BlueOS\source\blue_os.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="BlueOS\source\blue_os_container.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="BlueOS\source\blue_os_debug.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="BlueOS\source\blue_os_internals.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="BlueOS\source\blue_os_interrupt.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="BlueOS\source\blue_os_shell.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="BlueOS\source\blue_os_shell_vt100.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="BlueOS\source\blue_os_synchronization.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="BlueOS\source\blue_os_task.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="BlueOS\source\blue_os_utils.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="BlueOS\source\blue_os_mem.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="BlueOS\source\blue_os_callBack.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="BlueOS\source\blue_os.c">
+      <SubType>compile</SubType>
+      <CustomCompilationSetting Condition="'$(Configuration)' == 'default'">
+      </CustomCompilationSetting>
+    </Compile>
+    <Compile Include="BlueOS\source\blue_os_container.c">
+      <SubType>compile</SubType>
+      <CustomCompilationSetting Condition="'$(Configuration)' == 'default'">
+      </CustomCompilationSetting>
+    </Compile>
+    <Compile Include="BlueOS\source\blue_os_debug.c">
+      <SubType>compile</SubType>
+      <CustomCompilationSetting Condition="'$(Configuration)' == 'default'">
+      </CustomCompilationSetting>
+    </Compile>
+    <Compile Include="BlueOS\source\blue_os_interrupt.c">
+      <SubType>compile</SubType>
+      <CustomCompilationSetting Condition="'$(Configuration)' == 'default'">
+      </CustomCompilationSetting>
+    </Compile>
+    <Compile Include="BlueOS\source\blue_os_shell.c">
+      <SubType>compile</SubType>
+      <CustomCompilationSetting Condition="'$(Configuration)' == 'default'">
+      </CustomCompilationSetting>
+    </Compile>
+    <Compile Include="BlueOS\source\blue_os_shell_vt100.c">
+      <SubType>compile</SubType>
+      <CustomCompilationSetting Condition="'$(Configuration)' == 'default'">
+      </CustomCompilationSetting>
+    </Compile>
+    <Compile Include="BlueOS\source\blue_os_synchronization.c">
+      <SubType>compile</SubType>
+      <CustomCompilationSetting Condition="'$(Configuration)' == 'default'">
+      </CustomCompilationSetting>
+    </Compile>
+    <Compile Include="BlueOS\source\blue_os_task.c">
+      <SubType>compile</SubType>
+      <CustomCompilationSetting Condition="'$(Configuration)' == 'default'">
+      </CustomCompilationSetting>
+    </Compile>
+    <Compile Include="BlueOS\source\blue_os_utils.c">
+      <SubType>compile</SubType>
+      <CustomCompilationSetting Condition="'$(Configuration)' == 'default'">
+      </CustomCompilationSetting>
+    </Compile>
+    <Compile Include="BlueOS\source\blue_os_mem.c">
+      <SubType>compile</SubType>
+      <CustomCompilationSetting Condition="'$(Configuration)' == 'default'">
+      </CustomCompilationSetting>
+    </Compile>
+    <Compile Include="main.c">
+      <SubType>compile</SubType>
+      <CustomCompilationSetting Condition="'$(Configuration)' == 'default'">
+      </CustomCompilationSetting>
+    </Compile>
+  </ItemGroup>
+</Project>
