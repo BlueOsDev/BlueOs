@@ -1,4 +1,4 @@
-Copyright (C) 2010 	
+Copyright (C) 2013 	
 Moritz Nagel 	mnagel@htwg-konstanz.de
 Daniel Urbanietz 	daniel@d-urbanietz.de
 
