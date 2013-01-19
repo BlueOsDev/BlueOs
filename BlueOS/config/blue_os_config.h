@@ -1,4 +1,3 @@
-
 /********************************************************************************
 *Copyright (C) 2013 	Moritz Nagel 	mnagel@htwg-konstanz.de					*
 *					Daniel Urbanietz 	daniel@d-urbanietz.de					*
@@ -56,7 +55,7 @@
  * idle task.
  * @warning The idle tasks stack is also the system stack!
  */
-#define BLUE_OS_SYSTEM_STACKSIZE 96
+#define BLUE_OS_SYSTEM_STACKSIZE 196
 
 /**
  * This define configures the scheduler, which is used by the
@@ -114,7 +113,7 @@
 /**
  * The define BLUE_OS_USE_SHELL_BAUD_RATE configures the baud rate of
  * the standard input/output. Don't forget, that this value is 32 bit,
- * so an 'L'´must be added after the value, e.g. 38400L for 38400 baud.
+ * so an 'L'ï¿½must be added after the value, e.g. 38400L for 38400 baud.
  * In case of xmegas you have to specify baud and scale manually (see Datasheet)
  */
 #define BLUE_OS_USE_SHELL_BAUD_RATE 38400L
